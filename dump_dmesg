@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+set -x
+
+dmesgname="dmesg_`date +%4Y-%2m-%2d_%H:%2M:%2S`"
+dmesgpath="/home/nikow/dmesg/"
+
+cd $dmesgpath
+dmesg > $dmesgname
+xz -9ev $dmesgname

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -x
+
+PORTS="22 tcp 80 tcp 60022 tcp 8000 tcp 8888 tcp"
+
+upnpc -d $PORTS
+upnpc -r $PORTS

@@ -1,0 +1,6 @@
+#!/bin/bash
+set -x
+
+for x in "$@"
+  do echo "rm -rf \"$x\"" | batch
+done

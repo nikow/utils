@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+set -x
+grep Tapety ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml

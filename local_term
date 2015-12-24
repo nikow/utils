@@ -1,0 +1,4 @@
+#!/bin/bash
+set -x
+
+xfce4-terminal --hide-menubar --hide-toolbar -T @LOCAL -x tmux

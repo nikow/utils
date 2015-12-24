@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Connecting to proxy server for clear proxy."
+ssh -vvvvv -C haruka 'rm -rfv ~/proxy ; mkdir -p -v ~/proxy'
+echo "Proxy cleared."

@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+set -e
+
+cd /home/nikow/local/noip-2.1.9-1
+./noip2 -c no-ip2.conf
+
+echo "Done!"

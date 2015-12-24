@@ -1,0 +1,13 @@
+#!/bin/sh -x
+
+# destination_dir="/media/nikow/NikowMS_2/backup/"
+
+# rsync -a -v -P --delete --delete-excluded --exclude nikow/.Private/ --exclude nikow/.cache --exclude nikow/.thumbnails --exclude nikow/.local/share/Trash /home/nikow /media/nikow/NikowMS_2/backup
+
+#sudo rsync -a -v -P --delete /home/nikow /media/nikow/NikowMS_2/backup/home/
+
+# standard_backup_procedure $destination_dir
+
+#sudo rsync -a -v -P --no-whole-file --delete-before --delete-excluded --exclude /cdrom --exclude /dev --exclude /media --exclude /proc --exclude /run --exclude /sys --exclude /tmp --exclude /home/.ecryptfs --exclude /home/nikow/Pobrane/tnt_dwl / /media/nikow/NikowMS_2/backup
+
+sudo rsync -a -v -P --delete-excluded --exclude /cdrom --exclude /dev --exclude /media --exclude /proc --exclude /run --exclude /sys --exclude /tmp --exclude /home/.ecryptfs --exclude /home/nikow/Pobrane/tnt_dwl / /media/nikow/NikowMS_2/backup

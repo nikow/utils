@@ -11,5 +11,5 @@ fi
 
 set -x
 #youtube-dl -i --write-description -v --no-check-certificate --write-sub --all-subs $@ 
-youtube-dl -i --write-description -v --no-check-certificate --write-sub --all-subs -r 100 $@
+youtube-dl -i --write-description -v --no-check-certificate --write-sub --all-subs -r 250k $@
 exit 0

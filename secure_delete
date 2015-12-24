@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+
+for i in $@
+    do shred -f -u -v -z $i
+done
+echo "Done!"

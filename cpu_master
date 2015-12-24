@@ -1,0 +1,15 @@
+#/bin/bash
+set -x
+set -e
+
+if [ -z $1 ]; then
+    echo "Governors:"
+    cpufreq-info -g
+    exit 1
+fi
+
+for cid in `seq 0 3` ; 
+  do sudo cpufreq-set -c$cid -g $1 ; 
+done
+
+exit 0

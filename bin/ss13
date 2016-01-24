@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -x
+
+export WINEARCH=win32
+export WINEPREFIX=$HOME/.wine32_ss13/
+export WINEDEBUG=-all
+wine "C:/Program Files/Byond/bin/byond.exe"

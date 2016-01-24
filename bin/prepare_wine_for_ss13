@@ -1,0 +1,12 @@
+#!/bin/bash
+set -x 
+export WINEARCH=win32
+export WINEPREFIX=$HOME/.wine32_ss13/
+export WINEDEBUG=-all
+
+apt-get install wine winetricks
+wineboot
+winetricks wsh56 wsh57 jscript mfc42 vcrun6
+winetricks ie7
+winetricks ie8
+

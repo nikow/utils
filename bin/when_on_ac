@@ -1,0 +1,5 @@
+#!/bin/bash
+set -x
+if on_ac_power; then
+  $@
+fi

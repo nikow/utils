@@ -12,3 +12,4 @@ Scripts for which you are asking frequently
 |2015-12-26|Scripts or preparing Space Station 13 game for Linux.|
 |2016-01-16|Disabled limits for yt.|
 |2016-01-24|Fast and easy script to generate QR Codes from detailed view about train on rozklad-pkp.pl.|
+|2016-01-24|Added when_idle and when_on_ac utils for crontab and other automatic jobs|

@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+LOAD=`cat /proc/loadavg | cut -d" " -f1`
+THRESHOLD=2.0
+if [ $(bc <<< "$LOAD <= $THRESHOLD") -eq 1 ]; then
+    $@
+fi

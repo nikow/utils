@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+
+while true ; do 
+	date ; 
+	when_online exit 1 && service network-manager restart || echo "Still online." ;
+	sleep 1m ;
+done

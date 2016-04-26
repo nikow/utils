@@ -16,3 +16,4 @@ Scripts for which you are asking frequently
 |2016-01-24|Added when_online script for crontab and automats|
 |2016-01-30|restart_network_manager_when_offline - Some ubuntu users have problem with WiFi network crashing and not waking up as long as They do not restart network manager. This script is dirty solution for Their problem, when They're leaving Their computers for the night. Run using sudo or as root. |
 |2016-02-27|scrap_links_from_directory.sh and scrap_links_from_file.sh added. They are greping every link from directory/file and printig them in separated lines. It's usesfull for scrapers etc.|
+|2016-04-26|store_web - There are webs which i regulary store, because i like read them offline. Today i made script to do it automaticly from crone|

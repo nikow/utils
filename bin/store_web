@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ -z $@ ]]; then
+    echo "Usage: $0 link_to_site_to_dump [link_to_another_site_to_dump]"
+    echo "Personal note: Because poor domain recognize system, you must provide full URL (with http://)"
+    exit 1
+fi
+
+# Is there better log than just writed commands which are called?
+set -x
+
+# Decrease nice to not disturb other tasks in the system.
+renice -n 10 $$
+
+# Get today date. Script can work for many days, so we want stay with old date.
+today=$(date +%4Y-%2m-%2d)
+
+
+for link in $@ ; do
+    domain=$(echo $link | awk -F/ '{print $3}')
+    mkdir -p -v $domain
+    ln -s /dev/null -f -v $domain/robots.txt
+    wget -a $domain/wget-log -t 0 -c --no-cache -E --no-check-certificate --preserve-permissions -r -l 0 -k -K -p -np --restrict-file-names=windows -T 180 $link
+    tar cvf $(echo $today)_$domain.tar $domain
+    xz -9ev $(echo $today)_$domain.tar
+done

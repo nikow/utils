@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import os
+import sys
+import time
+import shutil
+import glob
+
+pause_time = int(sys.argv[1])
+source_dir = sys.argv[2]
+dest_dir = sys.argv[3]
+
+print("Pause time: %d" % pause_time)
+print("Source dir: %s" % source_dir)
+print("Dest_dir:   %s" % dest_dir)
+
+print("Waiting 10 seconds, make sure everything is okey...")
+time.sleep(10)
+
+while True:
+    for file_name in glob.glob(os.path.join(source_dir, '*.*')):
+        print("Coping %s to %s... " % (file_name, dest_dir), end='')
+        shutil.copy2(file_name, dest_dir)
+        print("Done")
+    print("Waiting %d seconds..." % pause_time)
+    time.sleep(pause_time)

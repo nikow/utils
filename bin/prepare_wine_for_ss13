@@ -1,5 +1,6 @@
 #!/bin/bash
 set -x 
+
 export WINEARCH=win32
 export WINEPREFIX=$HOME/.wine32_ss13/
 export WINEDEBUG=-all
@@ -10,3 +11,6 @@ winetricks wsh56 wsh57 jscript mfc42 vcrun6
 winetricks ie7
 winetricks ie8
 
+cd /tmp
+wget -c http://www.byond.com/download/build/509/509.1319_byond.exe
+wine ./509.1319_byond.exe
